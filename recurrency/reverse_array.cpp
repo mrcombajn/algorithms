@@ -1,12 +1,12 @@
 #include <iostream>
 using namespace std;
 
-void reverse_array(int arr[], int firstHalfIndex, int secondHalfIndex) {
-    if(firstHalfIndex >= secondHalfIndex)
+void reverse_array(int arr[], int leftIndex, int rightIndex) {
+    if(leftIndex >= rightIndex)
         return;
 
-    reverse_array(arr, firstHalfIndex + 1, secondHalfIndex - 1);
-    swap(arr[firstHalfIndex], arr[secondHalfIndex]);
+    reverse_array(arr, leftIndex + 1, rightIndex - 1);
+    swap(arr[leftIndex], arr[rightIndex]);
 }
 
 int main() {
@@ -14,8 +14,8 @@ int main() {
 
     reverse_array(arr, 0, end(arr) - begin(arr) - 1);
 
-    for (int i = 0; i < end(arr) - begin(arr); i++) {
-        cout << arr[i] << " ";
+    for(int i : arr) {
+        cout << i << " ";
     }
 
     return 0;
