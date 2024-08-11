@@ -13,8 +13,7 @@ int nwd(int a, int b) {
 // greatest common divisor via recurrency
 int main() {
     int gcd = nwd(4, 2);
-
-	cout<< gcd <<endl;
+	cout << gcd <<endl;
 
     return 0;
 }
