@@ -12,9 +12,9 @@ int nwd(int a, int b) {
 
 // greatest common divisor via recurrency
 int main() {
-    int max = nwd(4, 2);
+    int gcd = nwd(4, 2);
 
-	cout<< max<<endl;
+	cout<< gcd <<endl;
 
     return 0;
 }
